@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Loop, Array, String - Competitive Programming Club</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Loop, Array, String";
+    var mkdocs_page_input_path = "loop_array_string.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Competitive Programming Club</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Introduction</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Programming Language</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../variable_expression/">Variable, Expression, I/O, Conditioning</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Loop, Array, String</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#loops">Loops</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#array">Array</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#string">String</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../about/">About</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Competitive Programming Club</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Programming Language &raquo;</li>
+        
+      
+    
+    <li>Loop, Array, String</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="loop-array-string">Loop, Array, String</h1>
+<h2 id="loops">Loops</h2>
+<p>In C++, there are two ways to write loops in a program.</p>
+<p>Firstly, we can use <code>for</code> to create a loop for certain times</p>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+using namespace std;
+int main(){
+    for(int i = 0; i &lt; 10; i ++ )
+        cout &lt;&lt; i &lt;&lt; endl;
+    return 0;
+}
+</code></pre>
+<p>Secondly, we can use <code>while</code>, when we don't know exactly how many times to loop.</p>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+using namespace std;
+int main(){
+    int i = 0;
+    while(i &lt; 10){
+        cout &lt;&lt; i &lt;&lt; endl;
+        i ++ ;
+    }
+    return 0;
+}
+</code></pre>
+<p>We can nest up the loops when we want the program to execute for multiple times:</p>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+using namespace std;
+int main(){
+    for(int i = 0; i &lt; 10; i ++ )
+        for(int j = 0; j &lt; 10; j ++ )
+            cout &lt;&lt; i &lt;&lt; &quot; &quot; &lt;&lt; j &lt;&lt; endl;
+    return 0;
+}
+</code></pre>
+<h2 id="array">Array</h2>
+<p>When we want to store multiple elements together, we can use an array</p>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+using namespace std;
+int main(){
+    int array[] = {1, 2, 3, 4, 5};
+    for(int i = 0; i &lt; 5; i ++ )
+        cout &lt;&lt; array[i] &lt;&lt; endl;
+    return 0;
+}
+</code></pre>
+<p>Also, we can create 2d array</p>
+<p>the first dimension is row, the second dimension is column</p>
+<p>For example, if the array is</p>
+<p>1   2   3</p>
+<p>11  12  13</p>
+<p>21  22  23</p>
+<p>then, the number 3 is at row 0 column 2
+(the index of an array starts from 0)</p>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+using namespace std;
+int main(){
+    int array[][] = {
+        {1, 2, 3},
+        {11, 12, 13},
+        {21, 22, 23}
+    };
+    for(int i = 0; i &lt; 3; i ++ ){
+        for(int j = 0; j &lt; 3; j ++ ){
+            cout &lt;&lt; array[i][j] &lt;&lt; &quot; &quot;;
+        }
+        cout &lt;&lt; endl;
+    }
+    return 0;
+}
+</code></pre>
+<h2 id="string">String</h2>
+<p>String is sort of like a array of characters.</p>
+<p>Similar to how we access an element in an array, we can access a char of the string using [].</p>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+using namespace std;
+int main(){
+    string str = &quot;Testing&quot;;
+    cout &lt;&lt; str[0] &lt;&lt; endl;
+    return 0;
+}
+</code></pre>
+<p>In C++, string also have some functions built in.</p>
+<p><code>str.length()</code>: returns the length of a string.</p>
+<p><code>str.substring(index, len)</code>: returns a substring from the starting index with given length.</p>
+<p><code>str.substring(index)</code>: returns a substring from the starting index to the end of the string.</p>
+<p><code>str.find(str2)</code>: find out the first occurance of str2 in str. (returns string::npos, which is -1)</p>
+<pre><code class="language-cpp">// the program is too long
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../about/" class="btn btn-neutral float-right" title="About">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../variable_expression/" class="btn btn-neutral" title="Variable, Expression, I/O, Conditioning"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../variable_expression/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../about/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
