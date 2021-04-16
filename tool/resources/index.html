@@ -14,7 +14,7 @@
     
     
       
-        <title>Loop, Array, String - CP Guide</title>
+        <title>Learning Resources - CP Guide</title>
       
     
     
@@ -59,7 +59,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#loop-array-string" class="md-skip">
+        <a href="#website" class="md-skip">
           Skip to content
         </a>
       
@@ -89,7 +89,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Loop, Array, String
+              Learning Resources
             
           </span>
         </div>
@@ -221,14 +221,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
       
       <label class="md-nav__link" for="__nav_2">
         C++ Tutorial
@@ -246,7 +244,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../variable_expression/" class="md-nav__link">
+      <a href="../../prog_lang/variable_expression/" class="md-nav__link">
         Variable, Expression, I/O, Conditioning
       </a>
     </li>
@@ -256,70 +254,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Loop, Array, String
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../prog_lang/loop_array_string/" class="md-nav__link">
         Loop, Array, String
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#loops" class="md-nav__link">
-    Loops
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#array" class="md-nav__link">
-    Array
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#string" class="md-nav__link">
-    String
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#practice-problems" class="md-nav__link">
-    Practice Problems:
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -329,7 +268,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../function_reference_struct/" class="md-nav__link">
+      <a href="../../prog_lang/function_reference_struct/" class="md-nav__link">
         Function and Reference, Struct
       </a>
     </li>
@@ -474,12 +413,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
       
       <label class="md-nav__link" for="__nav_6">
         Resources and Tools
@@ -495,11 +436,20 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../tool/resources/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Learning Resources
       </a>
+      
     </li>
   
 
@@ -543,42 +493,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#loops" class="md-nav__link">
-    Loops
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#array" class="md-nav__link">
-    Array
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#string" class="md-nav__link">
-    String
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#practice-problems" class="md-nav__link">
-    Practice Problems:
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -590,94 +504,36 @@
               
                 
                 
-                <h1 id="loop-array-string">Loop, Array, String</h1>
-<h2 id="loops">Loops</h2>
-<p>In C++, there are two ways to write loops in a program.</p>
-<p>Firstly, we can use <code>for</code> to create a loop for certain times</p>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
-using namespace std;
-int main(){
-    for(int i = 0; i &lt; 10; i ++ )
-        cout &lt;&lt; i &lt;&lt; endl;
-    return 0;
-}
-</code></pre>
-<p>Secondly, we can use <code>while</code>, when we don't know exactly how many times to loop.</p>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
-using namespace std;
-int main(){
-    int i = 0;
-    while(i &lt; 10){
-        cout &lt;&lt; i &lt;&lt; endl;
-        i ++ ;
-    }
-    return 0;
-}
-</code></pre>
-<p>We can nest up the loops when we want the program to execute for multiple times:</p>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
-using namespace std;
-int main(){
-    for(int i = 0; i &lt; 10; i ++ )
-        for(int j = 0; j &lt; 10; j ++ )
-            cout &lt;&lt; i &lt;&lt; &quot; &quot; &lt;&lt; j &lt;&lt; endl;
-    return 0;
-}
-</code></pre>
-<h2 id="array">Array</h2>
-<p>When we want to store multiple elements together, we can use an array</p>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
-using namespace std;
-int main(){
-    int array[] = {1, 2, 3, 4, 5};
-    for(int i = 0; i &lt; 5; i ++ )
-        cout &lt;&lt; array[i] &lt;&lt; endl;
-    return 0;
-}
-</code></pre>
-<p>Also, we can create 2d array</p>
-<p>the first dimension is row, the second dimension is column</p>
-<p>For example, if the array is</p>
-<p>1   2   3</p>
-<p>11  12  13</p>
-<p>21  22  23</p>
-<p>then, the number 3 is at row 0 column 2
-(the index of an array starts from 0)</p>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
-using namespace std;
-int main(){
-    int array[][] = {
-        {1, 2, 3},
-        {11, 12, 13},
-        {21, 22, 23}
-    };
-    for(int i = 0; i &lt; 3; i ++ ){
-        for(int j = 0; j &lt; 3; j ++ ){
-            cout &lt;&lt; array[i][j] &lt;&lt; &quot; &quot;;
-        }
-        cout &lt;&lt; endl;
-    }
-    return 0;
-}
-</code></pre>
-<h2 id="string">String</h2>
-<p>String is sort of like a array of characters.</p>
-<p>Similar to how we access an element in an array, we can access a char of the string using [].</p>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
-using namespace std;
-int main(){
-    string str = &quot;Testing&quot;;
-    cout &lt;&lt; str[0] &lt;&lt; endl;
-    return 0;
-}
-</code></pre>
-<p>In C++, string also have some functions built in.</p>
-<p><code>str.length()</code>: returns the length of a string.</p>
-<p><code>str.substring(index, len)</code>: returns a substring from the starting index with given length.</p>
-<p><code>str.substring(index)</code>: returns a substring from the starting index to the end of the string.</p>
-<p><code>str.find(str2)</code>: find out the first occurance of str2 in str. (returns string::npos, which is -1)</p>
-<h2 id="practice-problems">Practice Problems:</h2>
-<p>to be completed.</p>
+                <h1 id="website">Website</h1>
+<ul>
+<li>==USACO Guide==</li>
+<li>AcWing</li>
+<li>CSES Problem Set</li>
+<li>AtCoder</li>
+<li>CodeForces</li>
+</ul>
+<h1 id="courses">Courses</h1>
+<ul>
+<li>==Competitive Programmer's Core Skills(Coursera)==</li>
+<li>Competitive Programming Course - some fun questions</li>
+<li>CodeForces Edu</li>
+<li>Carnegie-Mellon ICPC Course<ul>
+<li>topic-specific contests in CF group</li>
+</ul>
+</li>
+</ul>
+<h1 id="books">Books</h1>
+<ul>
+<li>Competitive Programmer's Handbook<ul>
+<li>CSES Problemset(mentioned before)</li>
+</ul>
+</li>
+<li>==Intro to USACO(Bronze, Silver) - Darren Yao==</li>
+<li>Java, C++ versions</li>
+<li>Principles of Algorithmic Problem Solving - Johan Sannemo</li>
+<li>Competitive Programming 4 - Steven Halim, Felix Halim</li>
+<li>CS Guide</li>
+</ul>
                 
               
               
@@ -696,7 +552,7 @@ int main(){
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href="../variable_expression/" class="md-footer__link md-footer__link--prev" rel="prev">
+        <a href="../../challenge/210414/" class="md-footer__link md-footer__link--prev" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -705,19 +561,19 @@ int main(){
               <span class="md-footer__direction">
                 Previous
               </span>
-              Variable, Expression, I/O, Conditioning
+              Challenge 1
             </div>
           </div>
         </a>
       
       
-        <a href="../function_reference_struct/" class="md-footer__link md-footer__link--next" rel="next">
+        <a href="../../about/" class="md-footer__link md-footer__link--next" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Function and Reference, Struct
+              About Us
             </div>
           </div>
           <div class="md-footer__button md-icon">
