@@ -897,28 +897,49 @@
 <p>Name variables with names that fit their meanings.</p>
 <p>For example, if you want to count the occurrence of an element, name the variable <code>int cnt = 0;</code>, and make <code>cnt += 1</code> every time you find the element.</p>
 <p>Format your codes that you understand how loops and conditions build up the program.</p>
-<pre><code class="language-cpp">/*Good Example*/
-#include &lt;iostream&gt;
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="cm">/*Good Example*/</span>
+<span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
 
-using namespace std;
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 
-int main(){
-    int n;
-    cin &gt;&gt; n;
-    cout &lt;&lt; n &lt;&lt; endl;
-    return 0;
-}
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">n</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
 
-/*Bad Example, even thought it also works*/
-#include &lt;iostream&gt;
-using
-namespace std;
-int main(){int n;cin&gt;&gt; n;
-    cout&lt;&lt;n
-    &lt;&lt; endl;
-    return
-    0;}
-</code></pre>
+<span class="cm">/*Bad Example, even thought it also works*/</span>
+<span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="k">using</span>
+<span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span><span class="kt">int</span> <span class="n">n</span><span class="p">;</span><span class="n">cin</span><span class="o">&gt;&gt;</span> <span class="n">n</span><span class="p">;</span>
+    <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">n</span>
+    <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="k">return</span>
+    <span class="mi">0</span><span class="p">;}</span>
+</code></pre></div>
+</td></tr></table>
 <h2 id="helpful-sources-books">Helpful Sources &amp; Books</h2>
 <p>There are many helpful online sources for programming, ranging from Youtube clips, Online Lectures, Online Judges, and other websites proving information.</p>
 <p><strong>Vjudge.net:</strong> a helpful website where I will publish question sets for training(not mandatory :-) )</p>

@@ -714,68 +714,113 @@
                 <h1 id="variable-expression-io-conditioning">Variable, Expression, I/O, Conditioning</h1>
 <h2 id="variable-and-expression">Variable and Expression:</h2>
 <p>Variables can be described as boxes which store values in them.</p>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
-using namespace std;
-int main(){
-    int a = 15;
-    cout &lt;&lt; a &lt;&lt; endl;
-    return 0;
-}
-</code></pre>
-<p>In C++, we can write some simple expressions.</p>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
-using namespace std;
-int main(){
-    int a = 15;
-    int b = 20;
-    int c = a + b;
-    cout &lt;&lt; c &lt;&lt; endl;
-    return 0;
-}
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">15</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">a</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
+<p>In C++, we can write some simple expressions.
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">15</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">c</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table></p>
 <h2 id="input-and-output">Input and Output</h2>
 <p>In C++, we use <code>cin</code> and <code>cout</code> to read user's input and print output to the screen</p>
 <p><code>cin</code> for reading input, and <code>cout</code> for printing output</p>
-<pre><code class="language-cpp">// Example 1
-#include &lt;iostream&gt;
-using namespace std;
-int main(){
-    int a;
-    cin &gt;&gt; a;
-    cout &lt;&lt; a &lt;&lt; endl;
-    return 0;
-}
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1">// Example 1</span>
+<span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="kt">int</span> <span class="n">a</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">a</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">a</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
 <h2 id="conditioning-if-else">Conditioning: if &amp; else</h2>
 <p>In C++, we can use<code>if</code> and <code>else</code> to create logical conditioning.</p>
 <p>For example, we want to output b when a equals 10, otherwise, we output -1</p>
-<p>We can do it through the following codes</p>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
-using namespace std;
-int main(){
-    int a;
-    int b = 1;
-    cin &gt;&gt; a;
-    if(a == 10) // we use '==' to represent equals in C++
-        cout &lt;&lt; b &lt;&lt; endl;
-    else
-        cout &lt;&lt; -1 &lt;&lt; endl;
-    return 0;
-}
-</code></pre>
+<p>We can do it through the following codes
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="kt">int</span> <span class="n">a</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">a</span><span class="p">;</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">a</span> <span class="o">==</span> <span class="mi">10</span><span class="p">)</span> <span class="c1">// we use &#39;==&#39; to represent equals in C++</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">b</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="k">else</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="mi">-1</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table></p>
 <p>There are also other types of variables:</p>
 <p>Also mind that char use single quote mark <code>char c = 'x';</code> while string uses double quote mark <code>string d = "cp";</code></p>
 <p><strong>endl</strong> means <strong>end</strong> of the <strong>l</strong>ine</p>
 <p>In C++, we use <code>endl</code>to start a new line when we are printing output</p>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
-using namespace std;
-int main(){
-    double b = 1.5; // floating-point number
-    char c = 'x';   // a single character
-    string d = &quot;cp&quot;;    // a string
-    cout &lt;&lt; b &lt;&lt; endl &lt;&lt; c &lt;&lt; endl &lt;&lt; d &lt;&lt; endl;
-}
-</code></pre>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="kt">double</span> <span class="n">b</span> <span class="o">=</span> <span class="mf">1.5</span><span class="p">;</span> <span class="c1">// floating-point number</span>
+    <span class="kt">char</span> <span class="n">c</span> <span class="o">=</span> <span class="sc">&#39;x&#39;</span><span class="p">;</span>   <span class="c1">// a single character</span>
+    <span class="n">string</span> <span class="n">d</span> <span class="o">=</span> <span class="s">&quot;cp&quot;</span><span class="p">;</span>    <span class="c1">// a string</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">b</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span> <span class="o">&lt;&lt;</span> <span class="n">c</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span> <span class="o">&lt;&lt;</span> <span class="n">d</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
 <h2 id="practice-problem">Practice Problem:</h2>
 <p><a href="https://vjudge.net/article/2582">link to complete problem set</a></p>
 <p>(you need to register an account on vjudge.net before submitting your solution)</p>

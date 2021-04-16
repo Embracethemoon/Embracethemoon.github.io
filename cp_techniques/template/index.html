@@ -670,104 +670,201 @@
 </div>
 
 <h2 id="general-template-in-c">General Template in C++</h2>
-<pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;
-using namespace std;
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span>
+<span class="normal">78</span>
+<span class="normal">79</span>
+<span class="normal">80</span>
+<span class="normal">81</span>
+<span class="normal">82</span>
+<span class="normal">83</span>
+<span class="normal">84</span>
+<span class="normal">85</span>
+<span class="normal">86</span>
+<span class="normal">87</span>
+<span class="normal">88</span>
+<span class="normal">89</span>
+<span class="normal">90</span>
+<span class="normal">91</span>
+<span class="normal">92</span>
+<span class="normal">93</span>
+<span class="normal">94</span>
+<span class="normal">95</span>
+<span class="normal">96</span>
+<span class="normal">97</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp"></span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 
-using ll = long long;
-using db = double;
-using str = string;
+<span class="k">using</span> <span class="n">ll</span> <span class="o">=</span> <span class="kt">long</span> <span class="kt">long</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">db</span> <span class="o">=</span> <span class="kt">double</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">str</span> <span class="o">=</span> <span class="n">string</span><span class="p">;</span>
 
-using pi = pair&lt;int,int&gt;;
-using pl = pair&lt;ll,ll&gt;;
-using pd = pair&lt;db,db&gt;;
+<span class="k">using</span> <span class="n">pi</span> <span class="o">=</span> <span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">pl</span> <span class="o">=</span> <span class="n">pair</span><span class="o">&lt;</span><span class="n">ll</span><span class="p">,</span><span class="n">ll</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">pd</span> <span class="o">=</span> <span class="n">pair</span><span class="o">&lt;</span><span class="n">db</span><span class="p">,</span><span class="n">db</span><span class="o">&gt;</span><span class="p">;</span>
 
-using vi = vector&lt;int&gt;;
-using vb = vector&lt;bool&gt;;
-using vl = vector&lt;ll&gt;;
-using vd = vector&lt;db&gt;;
-using vs = vector&lt;str&gt;;
-using vpi = vector&lt;pi&gt;;
-using vpl = vector&lt;pl&gt;;
-using vpd = vector&lt;pd&gt;;
+<span class="k">using</span> <span class="n">vi</span> <span class="o">=</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">vb</span> <span class="o">=</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">vl</span> <span class="o">=</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">ll</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">vd</span> <span class="o">=</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">db</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">vs</span> <span class="o">=</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">str</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">vpi</span> <span class="o">=</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">pi</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">vpl</span> <span class="o">=</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">pl</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">vpd</span> <span class="o">=</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">pd</span><span class="o">&gt;</span><span class="p">;</span>
 
-#define tcT template&lt;class T
-#define tcTU tcT, class U
-tcT&gt; using V = vector&lt;T&gt;;
-tcT, size_t SZ&gt; using AR = array&lt;T,SZ&gt;;
-tcT&gt; using PR = pair&lt;T,T&gt;;
-// pairs
-// #define mp make_pair
-#define f first
-#define s second
+<span class="cp">#define tcT template&lt;class T</span>
+<span class="cp">#define tcTU tcT, class U</span>
+<span class="n">tcT</span><span class="o">&gt;</span> <span class="k">using</span> <span class="n">V</span> <span class="o">=</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="n">tcT</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">SZ</span><span class="o">&gt;</span> <span class="k">using</span> <span class="n">AR</span> <span class="o">=</span> <span class="n">array</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="n">SZ</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="n">tcT</span><span class="o">&gt;</span> <span class="k">using</span> <span class="n">PR</span> <span class="o">=</span> <span class="n">pair</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="n">T</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="c1">// pairs</span>
+<span class="c1">// #define mp make_pair</span>
+<span class="cp">#define f first</span>
+<span class="cp">#define s second</span>
 
-// vectors
-// size(x), rbegin(x), rend(x) need C++17
-#define sz(x) int((x).size())
-#define bg(x) begin(x)
-#define all(x) bg(x), end(x)
-#define rall(x) x.rbegin(), x.rend()
-#define sor(x) sort(all(x))
-#define rsz resize
-#define ins insert
-#define ft front()
-#define bk back()
-#define pb push_back
-#define eb emplace_back
-#define pf push_front
-// #define rtn return
+<span class="c1">// vectors</span>
+<span class="c1">// size(x), rbegin(x), rend(x) need C++17</span>
+<span class="cp">#define sz(x) int((x).size())</span>
+<span class="cp">#define bg(x) begin(x)</span>
+<span class="cp">#define all(x) bg(x), end(x)</span>
+<span class="cp">#define rall(x) x.rbegin(), x.rend()</span>
+<span class="cp">#define sor(x) sort(all(x))</span>
+<span class="cp">#define rsz resize</span>
+<span class="cp">#define ins insert</span>
+<span class="cp">#define ft front()</span>
+<span class="cp">#define bk back()</span>
+<span class="cp">#define pb push_back</span>
+<span class="cp">#define eb emplace_back</span>
+<span class="cp">#define pf push_front</span>
+<span class="c1">// #define rtn return</span>
 
-#define lb lower_bound
-#define ub upper_bound
+<span class="cp">#define lb lower_bound</span>
+<span class="cp">#define ub upper_bound</span>
 
-/* Some Codes Skipped */
+<span class="cm">/* Some Codes Skipped */</span>
 
-// loops
-#define FOR(i,a,b) for (int (i) = (a); (i) &lt; (b); ++(i))
-#define REP(i,a) FOR(i,0,a)
-#define ROF(i,a,b) for (int (i) = (b)-1; (i) &gt;= (a); --(i))
-#define PER(i,a) ROF(i,0,a)
-#define rep(a) REP(_,a)
-#define each(a,x) for (auto&amp; a: x)
+<span class="c1">// loops</span>
+<span class="cp">#define FOR(i,a,b) for (int (i) = (a); (i) &lt; (b); ++(i))</span>
+<span class="cp">#define REP(i,a) FOR(i,0,a)</span>
+<span class="cp">#define ROF(i,a,b) for (int (i) = (b)-1; (i) &gt;= (a); --(i))</span>
+<span class="cp">#define PER(i,a) ROF(i,0,a)</span>
+<span class="cp">#define rep(a) REP(_,a)</span>
+<span class="cp">#define each(a,x) for (auto&amp; a: x)</span>
 
-const int MOD = 1e9+7;
-const int MX = 2e5+5;
-const ll INF = 1e18;
-const db PI = acos((db)-1);
-const int dx[4] = {1,0,-1,0}, dy[4] = {0,1,0,-1};   // for every grid problem
-tcT&gt; bool ckmin(T&amp; a, const T&amp; b) {
-    return b &lt; a ? a = b, 1 : 0; } // set a = min(a,b)
-tcT&gt; bool ckmax(T&amp; a, const T&amp; b) {
-    return a &lt; b ? a = b, 1 : 0; }
-tcT&gt; void remDup(vector&lt;T&gt;&amp; v) { // sort and remove duplicates
-    sort(all(v)); v.erase(unique(all(v)),end(v)); }
-// Some Codes Skipped
+<span class="k">const</span> <span class="kt">int</span> <span class="n">MOD</span> <span class="o">=</span> <span class="mf">1e9</span><span class="o">+</span><span class="mi">7</span><span class="p">;</span>
+<span class="k">const</span> <span class="kt">int</span> <span class="n">MX</span> <span class="o">=</span> <span class="mf">2e5</span><span class="o">+</span><span class="mi">5</span><span class="p">;</span>
+<span class="k">const</span> <span class="n">ll</span> <span class="n">INF</span> <span class="o">=</span> <span class="mf">1e18</span><span class="p">;</span>
+<span class="k">const</span> <span class="n">db</span> <span class="n">PI</span> <span class="o">=</span> <span class="n">acos</span><span class="p">((</span><span class="n">db</span><span class="p">)</span><span class="mi">-1</span><span class="p">);</span>
+<span class="k">const</span> <span class="kt">int</span> <span class="n">dx</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">-1</span><span class="p">,</span><span class="mi">0</span><span class="p">},</span> <span class="n">dy</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">-1</span><span class="p">};</span>   <span class="c1">// for every grid problem</span>
+<span class="n">tcT</span><span class="o">&gt;</span> <span class="kt">bool</span> <span class="n">ckmin</span><span class="p">(</span><span class="n">T</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">b</span> <span class="o">&lt;</span> <span class="n">a</span> <span class="o">?</span> <span class="n">a</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="mi">1</span> <span class="o">:</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span> <span class="c1">// set a = min(a,b)</span>
+<span class="n">tcT</span><span class="o">&gt;</span> <span class="kt">bool</span> <span class="n">ckmax</span><span class="p">(</span><span class="n">T</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="n">b</span> <span class="o">?</span> <span class="n">a</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="mi">1</span> <span class="o">:</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
+<span class="n">tcT</span><span class="o">&gt;</span> <span class="kt">void</span> <span class="n">remDup</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">v</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// sort and remove duplicates</span>
+    <span class="n">sort</span><span class="p">(</span><span class="n">all</span><span class="p">(</span><span class="n">v</span><span class="p">));</span> <span class="n">v</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">unique</span><span class="p">(</span><span class="n">all</span><span class="p">(</span><span class="n">v</span><span class="p">)),</span><span class="n">end</span><span class="p">(</span><span class="n">v</span><span class="p">));</span> <span class="p">}</span>
+<span class="c1">// Some Codes Skipped</span>
 
-inline namespace FileIO {
-    void setIn(str s) {freopen(s.c_str(),&quot;r&quot;,stdin);}
-    void setOut(str s) {freopen(s.c_str(),&quot;w&quot;,stdout);}
-    void setIO(str s = &quot;&quot;) {
-        cin.tie(0)-&gt;sync_with_stdio(0); // unsync C / C++ I/O streams
-        // cin.exceptions(cin.failbit);
-        // throws exception when do smth illegal
-        // ex. try to read letter into int
-        if (sz(s)) setIn(s+&quot;.in&quot;), setOut(s+&quot;.out&quot;);    // for old USACO
-    }
-}
+<span class="kr">inline</span> <span class="k">namespace</span> <span class="n">FileIO</span> <span class="p">{</span>
+    <span class="kt">void</span> <span class="nf">setIn</span><span class="p">(</span><span class="n">str</span> <span class="n">s</span><span class="p">)</span> <span class="p">{</span><span class="n">freopen</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">c_str</span><span class="p">(),</span><span class="s">&quot;r&quot;</span><span class="p">,</span><span class="n">stdin</span><span class="p">);}</span>
+    <span class="kt">void</span> <span class="nf">setOut</span><span class="p">(</span><span class="n">str</span> <span class="n">s</span><span class="p">)</span> <span class="p">{</span><span class="n">freopen</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">c_str</span><span class="p">(),</span><span class="s">&quot;w&quot;</span><span class="p">,</span><span class="n">stdout</span><span class="p">);}</span>
+    <span class="kt">void</span> <span class="nf">setIO</span><span class="p">(</span><span class="n">str</span> <span class="n">s</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">cin</span><span class="p">.</span><span class="n">tie</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">sync_with_stdio</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span> <span class="c1">// unsync C / C++ I/O streams</span>
+        <span class="c1">// cin.exceptions(cin.failbit);</span>
+        <span class="c1">// throws exception when do smth illegal</span>
+        <span class="c1">// ex. try to read letter into int</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">sz</span><span class="p">(</span><span class="n">s</span><span class="p">))</span> <span class="n">setIn</span><span class="p">(</span><span class="n">s</span><span class="o">+</span><span class="s">&quot;.in&quot;</span><span class="p">),</span> <span class="n">setOut</span><span class="p">(</span><span class="n">s</span><span class="o">+</span><span class="s">&quot;.out&quot;</span><span class="p">);</span>    <span class="c1">// for old USACO</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 
-int main() {
-    setIO();
+<span class="kt">int</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">setIO</span><span class="p">();</span>
 
-    // you should actually read the stuff at the bottom
-}
+    <span class="c1">// you should actually read the stuff at the bottom</span>
+<span class="p">}</span>
 
-/* stuff you should look for
-        * int overflow, array bounds
-        * special cases (n=1?)
-        * do smth instead of nothing and stay organized
-        * WRITE STUFF DOWN
-        * DO NOT GET STUCK ON ONE APPROACH
-*/
-</code></pre>
+<span class="cm">/* stuff you should look for</span>
+<span class="cm">        * int overflow, array bounds</span>
+<span class="cm">        * special cases (n=1?)</span>
+<span class="cm">        * do smth instead of nothing and stay organized</span>
+<span class="cm">        * WRITE STUFF DOWN</span>
+<span class="cm">        * DO NOT GET STUCK ON ONE APPROACH</span>
+<span class="cm">*/</span>
+</code></pre></div>
+</td></tr></table>
                 
               
               

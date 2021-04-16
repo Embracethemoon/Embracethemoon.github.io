@@ -666,38 +666,69 @@
                   <h1>Breadth First Search</h1>
                 
                 <h2 id="breadth-first-search">Breadth-First-Search</h2>
-<pre><code class="language-cpp">int num_vertices;     // number of vertices
-int num_edges;      // number of edges
-vi adj_list[num_vertices];     // adjacency list
-vi dist(num_vertices, -1);     // array storing distances to each vertex
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kt">int</span> <span class="n">num_vertices</span><span class="p">;</span>     <span class="c1">// number of vertices</span>
+<span class="kt">int</span> <span class="n">num_edges</span><span class="p">;</span>      <span class="c1">// number of edges</span>
+<span class="n">vi</span> <span class="n">adj_list</span><span class="p">[</span><span class="n">num_vertices</span><span class="p">];</span>     <span class="c1">// adjacency list</span>
+<span class="n">vi</span> <span class="nf">dist</span><span class="p">(</span><span class="n">num_vertices</span><span class="p">,</span> <span class="mi">-1</span><span class="p">);</span>     <span class="c1">// array storing distances to each vertex</span>
 
-void add_edge(int from, int to){
-    adj_list[from].pb(to);
-}
+<span class="kt">void</span> <span class="nf">add_edge</span><span class="p">(</span><span class="kt">int</span> <span class="n">from</span><span class="p">,</span> <span class="kt">int</span> <span class="n">to</span><span class="p">){</span>
+    <span class="n">adj_list</span><span class="p">[</span><span class="n">from</span><span class="p">].</span><span class="n">pb</span><span class="p">(</span><span class="n">to</span><span class="p">);</span>
+<span class="p">}</span>
 
-void BFS(int source){
+<span class="kt">void</span> <span class="nf">BFS</span><span class="p">(</span><span class="kt">int</span> <span class="n">source</span><span class="p">){</span>
 
-    vb visited(num_vertices, false);
-    queue&lt;int&gt; q;
-    q.push(source);
-    visited[source] = true;
-    dist[source] = 0;
+    <span class="n">vb</span> <span class="n">visited</span><span class="p">(</span><span class="n">num_vertices</span><span class="p">,</span> <span class="nb">false</span><span class="p">);</span>
+    <span class="n">queue</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">q</span><span class="p">;</span>
+    <span class="n">q</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">source</span><span class="p">);</span>
+    <span class="n">visited</span><span class="p">[</span><span class="n">source</span><span class="p">]</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+    <span class="n">dist</span><span class="p">[</span><span class="n">source</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
-    while(q.size()){
-        int cur_vertex = q.front();
-        vi cur_vertex_adj = adj_list[cur_vertex];
-        FOR(i, cur_vertex_adj.size()){
-            int adj_vertex = cur_vertex_adj[i];
-            if(visited[adj_vertex] == false){
-                visited[adj_vertex] = true;
-                dist[adj_vertex] = dist[cur_vertex] + 1;
-                q.push(adj_vertex);
-            }
-        }
-        q.pop();
-    }
-}
-</code></pre>
+    <span class="k">while</span><span class="p">(</span><span class="n">q</span><span class="p">.</span><span class="n">size</span><span class="p">()){</span>
+        <span class="kt">int</span> <span class="n">cur_vertex</span> <span class="o">=</span> <span class="n">q</span><span class="p">.</span><span class="n">front</span><span class="p">();</span>
+        <span class="n">vi</span> <span class="n">cur_vertex_adj</span> <span class="o">=</span> <span class="n">adj_list</span><span class="p">[</span><span class="n">cur_vertex</span><span class="p">];</span>
+        <span class="n">FOR</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">cur_vertex_adj</span><span class="p">.</span><span class="n">size</span><span class="p">()){</span>
+            <span class="kt">int</span> <span class="n">adj_vertex</span> <span class="o">=</span> <span class="n">cur_vertex_adj</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">visited</span><span class="p">[</span><span class="n">adj_vertex</span><span class="p">]</span> <span class="o">==</span> <span class="nb">false</span><span class="p">){</span>
+                <span class="n">visited</span><span class="p">[</span><span class="n">adj_vertex</span><span class="p">]</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+                <span class="n">dist</span><span class="p">[</span><span class="n">adj_vertex</span><span class="p">]</span> <span class="o">=</span> <span class="n">dist</span><span class="p">[</span><span class="n">cur_vertex</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+                <span class="n">q</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">adj_vertex</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="n">q</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</td></tr></table>
                 
               
               
